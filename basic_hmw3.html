@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berfin Surucu Final Project</title>
+
+    <style>
+.stars, .twinkling, .clouds {
+	position:absolute;
+	display:block;
+	top:0; bottom:0;
+	left:0; right:0;
+	width:100%; height:100%;
+}
+
+.stars {
+	z-index: 0;
+	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+}
+
+.twinkling{
+	z-index: 1;
+	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
+	animation: move-twink-back 200s linear infinite;
+}
+
+.clouds{
+	z-index: 2;
+    background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
+	animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+
+body{
+    font-family: monospace;
+    color: #474749;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+}
+
+img {
+    width: 45%;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+}
+h1{
+    color:#2B4260;
+    font-size: 32px;
+    margin-top: 30px;
+    margin-left: 18px;
+    
+}
+h2{
+    font-size: 18px;
+    margin-left: 18px;
+    width: 50%;
+    color: #474749;
+    margin-top: 20px;
+    line-height: 25px;
+}
+.noun{
+    font-size: 18px;
+    color: #313131;
+    width: 50%;
+}
+hr{
+    color: #313131;
+    height:2px;
+    border-width:0;
+    background-color:gray;
+    width: 40%;
+    margin-left: 18px;
+}
+.watchMe {
+        background-color: #313131;; /* fallback for old browsers */
+        color: #ffffff;
+        border: none;
+        border-radius: 30px;
+        margin: 28px auto;
+        padding: 20px 40px 20px 40px;
+        font-size: 18px;
+        transition: all 300ms ease-in-out;
+        letter-spacing: 1px;
+        font-weight: 700;
+        display: block;
+        box-shadow: 0 1px 20px rgb(0 0 0 / 50%);
+        }
+
+.watchMe:hover {
+        background-color: #2B4260;
+        color: #ffffff;
+        opacity: 1;
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        margin: 30px auto;
+        padding: 20px 40px 20px 40px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-family: "Assistant", sans-serif;
+
+    }
+    .quote{
+        font-style: italic;
+        font-size: 16px;
+        color: #2b4260cb
+    }
+    .footer{
+        text-align: center;
+        font-size: 18px;
+    }
+    .github {
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        font-family: monospace, cursive;
+        font-size: 24px;
+        font-weight: 600;
+        color: #161a1d;
+        transition: all 200ms ease-in-out;
+    }
+
+    .github:hover {
+        color: #2B4260
+}
+    .change{
+        text-align: center;
+        font-size: 24px;
+        font-family: monospace;
+
+
+    }
+    .link-info{
+        color: #262625ab;
+        text-decoration: none;
+        
+        font-family: monospace, cursive;
+        font-size: 24px;
+        font-weight: 600;
+        transition: all 200ms ease-in-out;
+        text-align: center;
+    }
+
+
+    </style>
+</head>
+<body>
+<h1>MOON • /muːn/ <br><em class = "noun">noun</em></h1>
+<hr align="left">
+<h2> the natural satellite of the earth, visible (chiefly at night) by reflected light from the sun.
+    <br>
+    <span class = "quote">"there was no moon, but a sky sparkling with brilliant stars"</span> </h2>
+
+
+<img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/587/original/6bt6XEoX7uxVz8YAeGCzN9-removebg-preview.png?1644147688" alt="Moon Picture">
+<!-- <div class = "twinkling"></div> -->
+<h3 class = "change">“But even when the moon looks like it's waning...it's actually never changing shape. Don't ever forget that.”</h3>
+<p class = "link-info">get more information 👉 <a
+    class="github"
+    href="https://en.wikipedia.org/wiki/Moon"
+    target="_blank"
+    >about moon</a> </p>
+<button class = "watchMe">Watch Moon 🌚</button>
+<div class = "clouds"></div>
+<p class = "footer"> <strong>CODED BY</strong> <a
+    class="github"
+    href="https://github.com/surucux"
+    target="_blank"
+    >🌑 surucux</a></p>
+
+<script>
+    function watchMoon() {
+
+    let name = prompt("Hi 👋, please enter your name? 🌖");
+    let hometown = prompt("Which country do you live in? 🌗");
+    alert("That's a great place for watching moon! 🌘");
+
+    if(hometown.toLowerCase() === "turkey") {
+
+        let newQ = document.querySelector(`h3`);
+        newQ.innerHTML = `✨Teşekkürler ${name}! 💫 <br /> Şimdi Ay'ı Türkiye'den izleyebilirsin 🇹🇷 !`;
+    }
+    else {
+
+        let newQ = document.querySelector(`h3`);
+    newQ.innerHTML = `✨Thank you ${name}! 💫 <br /> You will watch the moon from ${hometown}!`;
+    }
+    }
+
+    let watchMoonButton = document.querySelector(`.watchMe`);
+    watchMoonButton.addEventListener(`click`, watchMoon);
+
+
+</script>
+
+</body>
+</html>
